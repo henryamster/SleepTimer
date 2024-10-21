@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Sleep Timer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #3a3a3a;
+            border-radius: 10px;
+            background: #1e1e1e;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 360px;
+            margin: auto;
+        }
+        input, select, button {
+            margin: 10px 0;
+            background: #2a2a2a;
+            color: #ffffff;
+            border: 1px solid #3a3a3a;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #3a3a3a;
+        }
+        h1 {
+            color: #ffc076;
+            margin-bottom: 20px;
+        }
+        label {
+            color: #ffc076;
+            margin-top: 10px;
+            width: 100%;
+            text-align: left;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            text-align: center;
+        }
+        .success {
+            background-color: #4caf50;
+            color: white;
+        }
+        .error {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>&#128164;&#9202; Tab Sleep Timer</h1>
+    <label for="time">Time:</label>
+    <input type="number" id="time" min="1" placeholder="Enter time" />
+    <select id="unit">
+        <option value="seconds">Seconds</option>
+        <option value="minutes">Minutes</option>
+        <option value="hours">Hours</option>
+    </select>
+    <label for="specificTime">Or Specific Time (e.g., 12:25AM):</label>
+    <input type="time" id="specificTime" />
+    <button id="setTimer">Set Timer</button>
+    <div id="message" class="message" style="display: none;"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
